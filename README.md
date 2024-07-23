@@ -3,14 +3,14 @@
 
 This repository contains the data and scripts used in the paper **"Improving Blockchain Scalability with Hypergraph Payment Networks"**.
 In addition to the the transaction used in the paper, we add the generate_transactions.py file the allows you to create realistice LN transactions based on the LN topology.
-The transaction simulator is based on [LNTrafficSimulator] (https://github.com/ferencberes/LNTrafficSimulator), created by Fernec et al.
+The transaction simulator is based on [LNTrafficSimulator] (https://github.com/ferencberes/LNTrafficSimulator), created by Ferenc et al.
 
 ## Repository Contents
 
 - **`Lightning_2022_10k_transactions.csv`**: The generated transaction dataset used in the paper.
 - **`1ml_2022_merchants_in_topology.txt`**: The merchant list used to generate transactions.
 - **`LN_data_2022.zip`**: The Lightning Network topology data.
-- **`LNTrafficSimulator-master`**: The LNTrafficSimulator directory.
+- **`LNTrafficSimulator`**: The LNTrafficSimulator directory.
 - **`generate_transactions.py`**: A transcation generator file.
 
 ## Overview
@@ -46,10 +46,12 @@ To replicate our results or conduct your own analysis, follow these steps:
    ```bash
    python3 LNTrafficSimulator-master/setup.py
    ```
+   
+3. Extract 'LN_data_2022.zip' into 'LNTrafficSimulator/sample_data/'
 
-3. In the 'generate_transactions.py' file, set the 'amount' and 'count' variables to set the transaction size and number of transactions, respectively.
+4. In the 'generate_transactions.py' file, set the 'amount' and 'count' variables to set the transaction size and number of transactions, respectively.
 
-4. Run the simulation:
+5. Run the simulation:
    ```bash
    python3 generate_transactions.py
    ```
